@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 10;
+        var b = 20;
+        // console.log(sum(a,b));
+
+        // 函数声明的方式 会提前声明
+        function sum(n1, n2) {
+            var s = n1 + n2;
+            return s;
+        }
+        console.log(sum(a, b));
+
+        //直接量方式
+        var sum = function (n1, n2) {
+            var s = n1 + n2;
+            return s;
+        }
+        console.log(sum(a, b));
+
+        // 使用new关键字创建函数
+        var sum = new Function("n1", "n2", "var s=n1+n2; return s;");
+        console.log(sum(a, b));
+
+        console.log(typeof sum);
+
+        var str1 = "123";
+        var str2 = "123";
+        console.log(str1 == str2);      //true
+
+        var f1 = function () { return 1 + 2; };
+        var f2 = function () { return 1 + 2; };
+        console.log(f1 == f2);          //false
+    </script>
+</body>
+
+</html>

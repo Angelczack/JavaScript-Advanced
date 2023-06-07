@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //函数的定义者
+        function round(num, d) {
+            //比如：1234.5678  3
+            //1234567.8
+            //1234568
+            //1234.568
+            if (!isNaN(num) && !isNaN(d)) {
+                num *= Math.pow(10, d);
+                num = Math.round(num);
+                var res = num / Math.pow(10, d);
+                return res;
+            }
+            else {
+                // alert("error");
+                var err = new Error("必须输入数字");
+                throw err;
+            }
+        }
+
+        // 函数的调用者
+        var n = prompt("请输入一个小数");
+        var d = prompt("请输入小数位数");
+        try {
+            var r = round(n, d);
+            document.write(r);
+        }
+        catch(err) {
+            document.write("必须输入数字");
+        }
+
+    </script>
+</body>
+
+</html>

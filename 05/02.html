@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /*
+        var str1 = "tom";  //全局变量一直占用内存空间,造成全局污染
+        var str2 = "欢迎光临我的页面";
+        document.write(str1 + ',' + str2);
+        */
+
+        /*
+        function start() {  //丢了一个小污染,留下一个大污染
+        var str1 = "tom";  //局部变量,当函数执行完毕,会自动销毁
+        var str2 = "欢迎光临我的页面";
+        document.write(str1 + ',' + str2);
+        }
+        start();
+        */
+
+        // 匿名函数自调 匿名函数执行一次后,会自动销毁
+        (function(){
+        var str1 = "tom";  
+        var str2 = "欢迎光临我的页面";
+        document.write(str1 + ',' + str2+"<br>");
+        })();
+
+        +function(){
+        var str1 = "tom";  
+        var str2 = "欢迎光临我的页面";
+        document.write(str1 + ',' + str2+"<br>");
+        }();
+
+        -function(){
+        var str1 = "tom";  
+        var str2 = "欢迎光临我的页面";
+        document.write(str1 + ',' + str2+"<br>");
+        }();
+
+        !function(){
+        var str1 = "tom";  
+        var str2 = "欢迎光临我的页面";
+        document.write(str1 + ',' + str2+"<br>");
+        }();
+
+        
+
+
+
+
+
+    </script>
+</body>
+
+</html>

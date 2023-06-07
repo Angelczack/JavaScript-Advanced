@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var n = 1234.5678;
+        // 请用户输入四舍五入的小数位数
+        var d = prompt("请输入小数位数");
+        // try {
+        //     var result = n.toFixed(d);
+        //     console.log("结果为" + result);
+        // } catch (err) {
+        //     // alert("必须输入0或0以上的自然数");
+        //     alert(err);
+        //     console.log(err.name);
+        //     console.log(err.message);
+        // } finally {
+        //     console.log("错误捕获完毕");
+        // }
+
+        //如果可以提前预知错误原因，则可以使用if..else 语句替换
+        // try...catch
+        //执行效率高，且不会创建错误对象
+        if (d >= 0 && d <= 8) {
+            var result = n.toFixed(d);
+            console.log("结果为"+result);
+        } else {
+            alert("必须输入0~8之间的整数");
+        }
+
+
+
+
+        console.log("11111111111");
+        console.log("11111111111");
+        console.log("11111111111");
+        console.log("11111111111");
+    </script>
+</body>
+
+</html>

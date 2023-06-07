@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+        function game(user1) {
+            console.log("愤怒的小鸟");
+        }
+        function game(user1,user2) {
+            console.log("飞机大战");
+        }
+        function game(user1,user2,user3) {
+            console.log("斗地主");
+        }
+        */
+
+        // 模拟重载
+        function game() {
+            if(arguments.length==1){
+            console.log("愤怒的小鸟");
+            }else if(arguments.length==2){
+            console.log("飞机大战");
+            }
+            else if(arguments==3) {
+            console.log("斗地主");
+            }
+            else{
+                console.log("无法开始");
+            }
+        }
+
+        // 在支持重载的语言中，可以根据参数的不同，自动选择执行哪一个同名函数
+        // 但，js中，不支持重载
+        game("tom");
+        game("tom","mia");
+        game("tom","mia","jack");
+
+        var str ="hellow world";
+       console.log( str.indexOf("o"));
+       console.log( str.indexOf("o",5));
+
+       function f1(n1,n2) {
+        console.log("函数执行中...");
+        // 定义了形参，但没有传入实参时，形参变量的值undefined
+        console.log(n2);
+        console.log(arguments);
+        // 为定义形参,但传入了多个实参时,可使用arguments访问
+        console.log(arguments[4]);
+       }
+    //    f1(10,20);
+    //    f1(10);
+
+    f1(10,20,30,40,50);
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
